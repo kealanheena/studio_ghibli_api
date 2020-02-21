@@ -5,7 +5,7 @@
     <td>Release Date</td>
     <td>Rating</td>  
   </tr>
-  <% @highest_rated_ghibli_films.each do |film| %>
+  <% @highest_rated_ghibli_films.reverse.each do |film| %>
     <tr>
       <td><%= film["title"] %></td>
       <td><%= film["description"] %></td>
