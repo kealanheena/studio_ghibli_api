@@ -4,6 +4,7 @@ require './lib/studio_ghibli_api'
 class StudioGhibliList < Sinatra::Base
 
   get '/' do
+    @ghibli_films = StudioGhibli.new.films()
     erb :index
   end
 
