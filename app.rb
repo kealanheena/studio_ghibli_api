@@ -8,5 +8,10 @@ class StudioGhibliList < Sinatra::Base
     erb :index
   end
 
+  get '/alphabetical' do
+    @alpha_ghibli_films = StudioGhibli.new.sort_by_title
+    erb :alphabetical
+  end
+
   run! if app_file == $0
 end

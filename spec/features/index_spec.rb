@@ -1,6 +1,7 @@
 feature "Index" do
   let(:first_film) { "When Marnie Was There" }
   let(:second_film) { "The Tale of the Princess Kaguya" }
+  let(:last_film) { "Castle in the Sky" }
 
   scenario "Index page displays the titles of Ghibli movies" do
     visit("/")
@@ -11,5 +12,6 @@ feature "Index" do
   scenario "Index page displays the titles in order of release date(new - old)" do
     visit("/")
     expect(first_film).to appear_before(second_film, only_text: true)
+    expect(second_film).to appear_before(last_film, only_text: true)
   end
 end
