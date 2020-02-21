@@ -19,13 +19,25 @@ describe StudioGhibli do
     end
   end
 
-  describe '#sort_by_title' do
-    it 'should have "Arrietty" as the title of the first hash' do
-      expect(@studio_ghilbli.sort_by_title[0]).to include("title" => "Arrietty")
+  describe '#order_by' do
+    context 'when "title" is passed as an argument' do
+      it 'should have "Arrietty" as the title of the first hash' do
+        expect(@studio_ghilbli.order_by("title")[0]).to include("title" => "Arrietty")
+      end
+
+      it 'should have "Whisper of the Heart" as the title of the last hash' do
+        expect(@studio_ghilbli.order_by("title")[-1]).to include("title" => "Whisper of the Heart")
+      end
     end
 
-    it 'should have "Whisper of the Heart" as the title of the last hash' do
-      expect(@studio_ghilbli.sort_by_title[-1]).to include("title" => "Whisper of the Heart")
+    context 'When "rt_score" is passed as an argument' do
+      it 'should have "Tales from Earthsea" as the title of the first hash' do
+        expect(@studio_ghilbli.order_by("rt_score")[0]).to include("title" => "Tales from Earthsea")
+      end
+
+      it 'should have "The Tale of the Princess Kaguya" as the title of the last hash' do
+        expect(@studio_ghilbli.order_by("rt_score")[-1]).to include("title" => "The Tale of the Princess Kaguya")
+      end
     end
   end
 end

@@ -9,8 +9,13 @@ class StudioGhibliList < Sinatra::Base
   end
 
   get '/alphabetical' do
-    @alpha_ghibli_films = StudioGhibli.new.sort_by_title
+    @alpha_ghibli_films = StudioGhibli.new.order_by("title")
     erb :alphabetical
+  end
+
+  get '/highestrated' do
+    @highest_rated_ghibli_films = StudioGhibli.new.order_by("rt_score")
+    erb :highest_rated
   end
 
   run! if app_file == $0

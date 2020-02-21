@@ -9,7 +9,9 @@ class StudioGhibli
     self.class.get("/films/#{film_id}")
   end
 
-  def sort_by_title
-    films.sort_by { |k| k["title"] }
+  def order_by(order)
+    return films.sort_by { |k| k[order] } if order == "title"
+    
+    films.sort_by { |k| k[order].to_i }
   end
 end
