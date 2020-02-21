@@ -1,1 +1,16 @@
-<%= @ghibli_films %>
+<table>
+  <tr>
+    <td>Title</td>
+    <td>Description</td>
+    <td>Release Date</td>
+    <td>Rating</td>  
+  </tr>
+  <% @ghibli_films.reverse.each do |film| %>
+    <tr>
+      <td><%= film["title"] %></td>
+      <td><%= film["description"] %></td>
+      <td><%= film["release_date"]%></td>
+      <td><%= film["rt_score"].to_f/10 %></td>
+    </tr>
+  <% end %>
+</table>
