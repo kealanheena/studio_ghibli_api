@@ -9,6 +9,3 @@ class StudioGhibli
     self.class.get("/films/#{film_id}")
   end
 end
-
-studio_ghibli = StudioGhibli.new
-# puts studio_ghibli.films
