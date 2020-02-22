@@ -1,0 +1,60 @@
+body {
+  background-image: url("../images/background.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-attachment: fixed;
+  color: #30382C;
+}
+
+td {
+  border: 2px solid black;
+  padding: 0.15em;
+  min-width: 2%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.headings {
+  font-size: 20px;
+}
+
+.main.container {
+  background-color: rgba(255,255,255,0.9);;
+  width: 75%;
+  padding: 3em;
+}
+
+a.btn.btn-outline-primary{
+  color: #503D3D;
+  border-color: #503D3D;
+}
+
+a.btn.btn-primary{
+  color: white;
+  background-color: #503D3D;
+  border-color: #503D3D;
+}
+
+a.btn.btn-primary:hover{
+  color: white;
+  background-color: #503D3D;
+  border-color: #503D3D;
+  cursor: auto;
+}
+
+a.btn.btn-outline-primary:hover{
+  color: white;
+  background-color: #503D3D;
+}
+
+.sticky-top{
+  padding: 0.5%;
+  text-align: center;
+  background: url("../images/background.jpg");
+  background-size: cover;
+  background-position: 3% 3%;
+}

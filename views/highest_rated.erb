@@ -1,10 +1,3 @@
-<table>
-  <tr>
-    <td>Title</td>
-    <td>Description</td>
-    <td>Release Date</td>
-    <td>Rating</td>  
-  </tr>
   <% @highest_rated_ghibli_films.reverse.each do |film| %>
     <tr>
       <td><%= film["title"] %></td>
