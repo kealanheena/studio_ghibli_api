@@ -2,7 +2,7 @@
 
 This is an app that displays all of the Studio Ghibli movies as well as their rating and release date using an API. You can change the order they are displayed in, you can choose to organise them by alphabetical order, rating(highest to lowest) and release date(newest to oldest). 
 
-<img src="Screen Shot 2020-03-05 at 15.37.30.png"/>
+<img src="./public/images/Screen Shot 2020-03-05 at 15.37.30.png"/>
 
 ## Table of Content
 - [User Stories](#user-stories)
