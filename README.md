@@ -10,6 +10,9 @@ This is an app that displays all of the Studio Ghibli movies as well as their ra
 - [Tech used](#tech-used)
 - [Getting started](#getting-started)
 - [Running the tests](#running-the-tests)
+  - [Test coverage](#test-coverage)
+    - [Feature tests](#feature-tests)
+    - [Unit tests](#unit-tests)
 - [Versioning](#versioning)  
 
 ## User Stories
@@ -54,8 +57,41 @@ I would like to organise the films by release date.
 
 ## Getting Started
 
-Run the below in the terminal in your makers-bnb directory:
+Run the below in the terminal in your studio-ghibli-api directory:
 - To install all necessary gems, run ```bundle```
 - To open in web browser run ```ruby app.rb```
 - Open http://localhost:4567/
+
+## Running the tests  
+
+You can run tests by running ```rspec``` in the terminal in the studio-ghibli-api directory.
+
+### Test coverage  
+#### Feature tests
+
+- Alphabetical
+  - Alphabetical page displays the titles in alphabetical order
+- Highest Rated
+  - Highest Rated page displays the titles in order of release date(new - old)
+- Index
+  - Index page displays the titles of Ghibli movies
+  - Index page displays the titles in order of release date(new - old)
+ 
+#### Unit tests
+
+- StudioGhibli
+  - *films*
+    - should return an array of hashes that are studio ghibli films
+    - should have "Castle in the Sky" as the title of the first hash
+    - should have "When Marnie Was There" as the title of the last hash
+  - *order_by*
+    - context - when "title" is passed as an argument
+      - should have "Arrietty" as the title of the first has
+      - should have "Whisper of the Heart" as the title of the last hash
+    - context - When "rt_score" is passed as an argument
+      - should have "Tales from Earthsea" as the title of the first hash
+      - should have "The Tale of the Princess Kaguya" as the title of the last hash
+
+## Versioning
+studio-ghibli-api rubocop version 0.71.0 running bundle install will install rubocop version 0.71.0.
 
