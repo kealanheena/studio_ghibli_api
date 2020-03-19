@@ -93,5 +93,5 @@ You can run tests by running ```rspec``` in the terminal in the studio-ghibli-ap
       - should have "The Tale of the Princess Kaguya" as the title of the last hash
 
 ## Versioning
-studio-ghibli-api rubocop version 0.71.0 running bundle install will install rubocop version 0.71.0.
+studio-ghibli-api uses rubocop version 0.71.0 running bundle install will install rubocop version 0.71.0.
 
